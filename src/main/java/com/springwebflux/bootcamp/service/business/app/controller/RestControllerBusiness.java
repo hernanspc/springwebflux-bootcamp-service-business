@@ -8,13 +8,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.springwebflux.bootcamp.service.business.app.services.BusinessServicesImplement;
 import com.springwebflux.bootcamp.service.business.app.model.Business;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
 @RestController
 @RequestMapping("api")
 public class RestControllerBusiness {
@@ -28,24 +25,24 @@ BusinessServicesImplement implement;
 	return implement.getBusiness();
 	}	
 
-@PostMapping("/createCurrentAccounts")
-	Mono<Business> CreateBusiness(@RequestBody Business business){		
+@PostMapping("/createBusiness")
+	Mono<Business> createBusiness(@RequestBody Business business){		
 		return implement.createBusiness(business);		
 	}
 	
-@DeleteMapping("/deleteCurrentAccounts/{id}")
+@DeleteMapping("/deleteBusiness/{id}")
 	Mono<Void> deleteBusinessMono(@PathVariable String id){		
 		return implement.deleteBusiness(id);		
 	}
 	
-@PutMapping("/updateCurrentAccounts")
-	Mono<Business> UpdateBusiness(@RequestBody Business business){		
+@PutMapping("/updateBusiness")
+	Mono<Business> updateBusiness(@RequestBody Business business){		
 		return implement.updateBusiness(business);		
 	}
 
-@GetMapping("/getCurrentAccountsNro/{nro}")
-	Mono<Business>getBusinessNrodoc(@PathVariable String nro){		
-		return implement.getBusinessNrodoc(nro);		
+@GetMapping("/getBusinessNrodoc/{nro_doc}")
+	Mono<Business>getBusinessNrodoc(@PathVariable String nro_doc){		
+		return implement.getBusinessNrodoc(nro_doc);
 	}
 	
 @GetMapping("/txt")

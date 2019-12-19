@@ -1,29 +1,29 @@
 package com.springwebflux.bootcamp.service.business.app.model;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 @Document(collection="business")
 public class Business {
 	
 @Id
 	private String id;
-	private String identification_number;
+	private String nro_doc;
 	private String name;
-	private String adress;
-	private String email;
-	private String phone_number;
+	private String mail;
+	private String phone;
+	private String status;
+	private String client_type;
+	
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getIdentification_number() {
-		return identification_number;
+	public String getNro_doc() {
+		return nro_doc;
 	}
-	public void setIdentification_number(String identification_number) {
-		this.identification_number = identification_number;
+	public void setNro_doc(String nro_doc) {
+		this.nro_doc = nro_doc;
 	}
 	public String getName() {
 		return name;
@@ -31,25 +31,30 @@ public class Business {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAdress() {
-		return adress;
+	public String getMail() {
+		return mail;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-	public String getEmail() {
-		return email;
+	public String getPhone() {
+		return phone;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getPhone_number() {
-		return phone_number;
+	public String getStatus() {
+		return status;
 	}
-	public void setPhone_number(String phone_number) {
-		this.phone_number = phone_number;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	
-	
+	public String getClient_type() {
+		return client_type;
+	}
+	public void setClient_type(String client_type) {
+		this.client_type = client_type;
+	}
+ 
 	
 }

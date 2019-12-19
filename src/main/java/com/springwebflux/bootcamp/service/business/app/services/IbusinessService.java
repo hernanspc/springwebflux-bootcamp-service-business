@@ -11,11 +11,11 @@ public interface IbusinessService {
 	
 	Mono<Business>createBusiness(Business business);
 	
-	Mono<Void>deleteBusiness(String Id);
+	Mono<Void>deleteBusiness(String id);
 	
 	Mono<Business>updateBusiness(Business business);
 	
-	Mono<Business>getBusinessNrodoc(String nrodoc);
+	Mono<Business>getBusinessNrodoc(String nro_doc);
 	
 	
 }

@@ -1,25 +1,19 @@
 package com.springwebflux.bootcamp.service.business.app.services;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.springwebflux.bootcamp.service.business.app.model.Business;
 import com.springwebflux.bootcamp.service.business.app.repository.IbusinessRepository;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 @Service
 public class BusinessServicesImplement implements IbusinessService {
-
 	@Autowired
 	IbusinessRepository repositorio;
-
 	@Override
 	public Flux<Business> getBusiness() {
 		// TODO Auto-generated method stub
 		return repositorio.findAll();
 	}
-
 	@Override
 	public Mono<Business> createBusiness(Business business) {
 		// TODO Auto-generated method stub
@@ -28,9 +22,9 @@ public class BusinessServicesImplement implements IbusinessService {
 	}
 
 	@Override
-	public Mono<Void> deleteBusiness(String Id) {
+	public Mono<Void> deleteBusiness(String id) {
 		// TODO Auto-generated method stub
-		return repositorio.deleteById(Id);
+		return repositorio.deleteById(id);
 	}
 
 	@Override
@@ -40,9 +34,9 @@ public class BusinessServicesImplement implements IbusinessService {
 	}
 
 	@Override
-	public Mono<Business> getBusinessNrodoc(String nrodoc) {
+	public Mono<Business> getBusinessNrodoc(String nro_doc) {
 		// TODO Auto-generated method stub
-		return repositorio.findByNrodoc(nrodoc);
+		return repositorio.findBynrodoc(nro_doc); 
 	}
 	
 	 
