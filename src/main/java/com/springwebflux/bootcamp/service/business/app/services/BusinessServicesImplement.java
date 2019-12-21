@@ -17,7 +17,6 @@ public class BusinessServicesImplement implements IbusinessService {
 	@Override
 	public Mono<Business> createBusiness(Business business) {
 		// TODO Auto-generated method stub
-		System.out.println(business.getName());
 		return repositorio.save(business);
 	}
 
@@ -34,9 +33,9 @@ public class BusinessServicesImplement implements IbusinessService {
 	}
 
 	@Override
-	public Mono<Business> getBusinessNrodoc(String nro_doc) {
+	public Mono<Business> getBusinessNrodoc(String nrodoc) {
 		// TODO Auto-generated method stub
-		return repositorio.findBynrodoc(nro_doc); 
+		return repositorio.findByNrodoc(nrodoc); 
 	}
 	
 	 

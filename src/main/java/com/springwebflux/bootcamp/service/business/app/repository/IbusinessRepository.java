@@ -6,6 +6,6 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface IbusinessRepository extends ReactiveMongoRepository<Business, String> {
 
-	Mono<Business> findBynrodoc(String nro_doc);
+	Mono<Business> findByNrodoc(String nrodoc);
 	
 }

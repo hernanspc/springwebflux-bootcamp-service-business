@@ -16,11 +16,11 @@ import reactor.core.publisher.Mono;
 @RequestMapping("api")
 public class RestControllerBusiness {
 
- @Autowired
-BusinessServicesImplement implement;
- 
- @GetMapping("/getBusiness") 
- Flux<Business>getBusiness()
+@Autowired
+	BusinessServicesImplement implement;
+
+@GetMapping("/getBusiness") 
+	Flux<Business>getBusiness()
 	{
 	return implement.getBusiness();
 	}	
@@ -40,9 +40,9 @@ BusinessServicesImplement implement;
 		return implement.updateBusiness(business);		
 	}
 
-@GetMapping("/getBusinessNrodoc/{nro_doc}")
-	Mono<Business>getBusinessNrodoc(@PathVariable String nro_doc){		
-		return implement.getBusinessNrodoc(nro_doc);
+@GetMapping("/getBusinessNrodoc/{nrodoc}")
+	Mono<Business>getBusinessNrodoc(@PathVariable String nrodoc){		
+		return implement.getBusinessNrodoc(nrodoc);
 	}
 	
 @GetMapping("/txt")
