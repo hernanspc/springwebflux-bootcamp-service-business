@@ -4,15 +4,15 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 public interface IbusinessService {
 
-	Flux<Business>getBusiness();
+	public Flux<Business>getBusiness();
 	
-	Mono<Business>createBusiness(Business business);
+	public Mono<Business>createBusiness(Business business);
 	
-	Mono<Void>deleteBusiness(String id);
+	public Mono<Void>deleteBusiness(String id);
 	
-	Mono<Business>updateBusiness(Business business);
+	public Mono<Business>updateBusiness(Business business);
 	
-	Mono<Business>getBusinessNrodoc(String nrodoc);
+	public Mono<Business>getBusinessNrodoc(String nrodoc);
 	
 	
 }
